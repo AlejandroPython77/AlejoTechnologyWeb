@@ -20,8 +20,6 @@ body {
 .hero-section {
     background-color: #1a0033; /* Color de fondo sólido, igual que el body */
     position: relative;
-    padding-top: 80px; /* Ajusta según sea necesario */
-    padding-bottom: 80px; /* Ajusta según sea necesario */
     z-index: 1; /* Asegura que el contenido esté por encima de los logos flotantes */
     overflow: hidden; /* Para que los logos flotantes no se desborden al inicio */
 }
@@ -89,7 +87,7 @@ body {
     color: white;
     box-shadow: 0 0 8px #a78bfa; /* Sombra neón morada */
     transition: all 0.3s ease-in-out;
-    font-size: 0.9rem; /* Ajuste para móvil por defecto */
+    font-size: 0.875rem; /* text-sm de Tailwind, adecuado para móvil */
 }
 .btn-card-cta:hover {
     background-color: #a78bfa; /* Morado más claro al hover */
@@ -103,7 +101,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    padding: 1rem 3rem;
+    padding: 0.8rem 2rem; /* Ajustado para móvil */
     border-radius: 9999px; /* rounded-full */
     background-color: #5c0099; /* Morado principal */
     color: white;
@@ -124,7 +122,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    padding: 1rem 3rem;
+    padding: 0.8rem 2rem; /* Ajustado para móvil */
     border-radius: 9999px;
     background-color: transparent; /* Fondo transparente */
     color: #a78bfa; /* Texto morado claro */
@@ -146,7 +144,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    padding: 1rem 2.5rem; /* Más pequeño para móvil */
+    padding: 0.9rem 2rem; /* Más pequeño para móvil */
     border-radius: 9999px; /* rounded-full */
     background-color: #22c55e; /* Verde WhatsApp */
     color: white;
@@ -165,7 +163,7 @@ body {
 /* Estilo de las tarjetas de beneficios (grid) */
 .benefit-card {
     background-color: #2a0050; /* Morado oscuro para las tarjetas de beneficios */
-    padding: 1.5rem; /* p-6 para móvil */
+    padding: 1.25rem; /* p-5 para móvil */
     border-radius: 1rem; /* rounded-xl */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* shadow-2xl */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -182,13 +180,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px; /* Más pequeño para móvil */
-    height: 50px; /* Más pequeño para móvil */
+    width: 45px; /* Más pequeño para móvil */
+    height: 45px; /* Más pequeño para móvil */
     border-radius: 50%;
     background-color: #8b5cf6; /* Morado medio para el círculo */
     color: white;
-    font-size: 1.5rem; /* Más pequeño para móvil */
-    margin: 0 auto 1rem auto; /* Centrar y espacio inferior */
+    font-size: 1.3rem; /* Más pequeño para móvil */
+    margin: 0 auto 0.75rem auto; /* Centrar y espacio inferior */
     box-shadow: 0 0 10px #a78bfa; /* Sombra neón en los íconos */
     transition: all 0.3s ease-in-out;
 }
@@ -284,8 +282,8 @@ body {
     opacity: 0.1; /* Ligera transparencia */
     filter: grayscale(100%) brightness(0.5); /* Oscurecer y desaturar un poco */
     animation: floatEffect 20s infinite ease-in-out;
-    /* Ajustes de tamaño para móvil */
-    width: 40px; /* Tamaño base más pequeño para logos flotantes */
+    /* Tamaño por defecto (móvil) */
+    width: 35px; /* Más pequeño para pantallas muy pequeñas */
 }
 
 /* Posiciones iniciales y tamaños para logos flotantes (ajustados para móvil si es necesario) */
@@ -339,99 +337,138 @@ body {
 
 /* Media queries para responsividad */
 @media (max-width: 767px) {
+    /* Ocultar la navegación de escritorio y mostrar el botón de menú hamburguesa */
+    /* Estas clases ya están en el HTML con hidden md:block, etc. */
     header nav {
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%; /* Justo debajo del header */
-        left: 0;
-        background-color: #1a0033; /* Color de fondo del menú móvil */
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-        padding: 1rem 0;
-        z-index: 10; /* Asegura que esté por encima del contenido */
+        /* Eliminamos flex-col, absolute, top-full, left-0, w-full, bg-gray-900, py-4, shadow-xl
+           porque el JS ahora maneja el toggle de la clase 'hidden' y 'flex flex-col items-center'
+           Las propiedades de posicionamiento y tamaño ya están en el HTML para móvil. */
     }
 
     header nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 0;
+        /* No necesitamos redefinir flex-direction, width, align-items, padding aquí si ya lo hizo el HTML. */
     }
 
     header nav ul li {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem; /* Pequeño espacio entre los ítems en móvil */
     }
 
     header nav ul li a {
-        display: block;
-        padding: 0.75rem 0;
+        padding: 0.75rem 0; /* Más grande para facilitar el toque */
         font-size: 1.1rem; /* Un poco más grande para facilitar el toque */
     }
 
-    /* Ajustes generales de paddings y fuentes para mobile */
-    .hero-section {
-        padding-top: 50px; /* Reducir padding superior */
-        padding-bottom: 50px; /* Reducir padding inferior */
+    /* Ajustes específicos de tamaño para pantallas pequeñas (hasta 640px aprox) */
+    .logo-text {
+        font-size: 1.75rem; /* text-2xl en Tailwind (28px) */
     }
-
-    /* Overrides de tamaños de texto para móvil que Tailwind no cubre por defecto en algunos casos */
+    
     .hero-section h2 {
-        font-size: 2.5rem; /* Ajuste más pequeño para títulos principales en móvil */
+        font-size: 2.25rem; /* text-3xl en Tailwind (36px) */
     }
 
     .hero-section p {
-        font-size: 0.95rem; /* Párrafos del hero un poco más pequeños */
+        font-size: 0.95rem; /* Ajuste para párrafos del hero */
     }
 
     .btn-primary-cta, .btn-secondary-outline {
         width: 100%; /* Botones de acción principal ocupan todo el ancho */
         font-size: 0.9rem;
-        padding: 0.8rem 2rem;
+        padding: 0.8rem 1.5rem; /* Reducir padding horizontal para pantallas muy pequeñas */
     }
 
     .btn-primary-cta-lg {
-        padding: 0.9rem 2rem; /* Botón de WhatsApp más ajustado */
         font-size: 0.9rem;
-    }
-
-    .benefit-card {
-        padding: 1.25rem; /* p-5 para móviles */
+        padding: 0.9rem 1.5rem; /* Reducir padding horizontal */
     }
 
     .benefit-card h4 {
-        font-size: 1.35rem; /* Títulos de beneficios más pequeños */
+        font-size: 1.25rem; /* text-lg en Tailwind (20px) */
+    }
+
+    .benefit-card p {
+        font-size: 0.75rem; /* text-xs en Tailwind (12px) para la descripción */
     }
 
     .icon-circle {
-        width: 45px; /* Iconos más pequeños */
-        height: 45px;
-        font-size: 1.3rem;
-        margin-bottom: 0.75rem;
+        width: 40px; /* Iconos un poco más pequeños */
+        height: 40px;
+        font-size: 1.2rem;
+        margin-bottom: 0.6rem;
     }
-
-    /* Asegurar que los logos flotantes sean más pequeños en móvil */
+    
+    /* Logos flotantes más pequeños en móvil */
     .float-logo {
-        width: 30px; /* Logos flotantes más pequeños */
-        opacity: 0.08; /* Menos notorios */
+        width: 25px; /* Más pequeños para no saturar la pantalla */
+        opacity: 0.06; /* Aún más sutiles */
     }
 }
 
-/* Reglas específicas para pantallas medianas y grandes, si es necesario */
-@media (min-width: 768px) {
+
+/* Media queries para responsividad */
+/* Tailwind ya maneja esto con prefijos sm:, md:, lg:, etc.
+   Estas reglas CSS personalizadas solo son un "fall-back" o para ajustes muy finos. */
+@media (min-width: 640px) { /* sm breakpoint */
+    .logo-text {
+        font-size: 2rem; /* text-3xl en Tailwind (32px) */
+    }
+    .hero-section h2 {
+        font-size: 3rem; /* text-4xl en Tailwind (48px) */
+    }
+    .hero-section p {
+        font-size: 1rem; /* text-lg en Tailwind (18px) */
+    }
+    .btn-primary-cta, .btn-secondary-outline {
+        padding: 1rem 2.5rem; /* padding normal para sm+ */
+        font-size: 1rem;
+    }
+    .btn-primary-cta-lg {
+        padding: 1rem 2.5rem;
+        font-size: 1rem;
+    }
+    .benefit-card h4 {
+        font-size: 1.5rem; /* text-xl en Tailwind (24px) */
+    }
+    .benefit-card p {
+        font-size: 0.875rem; /* text-sm en Tailwind (14px) */
+    }
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .float-logo {
+        width: 40px;
+        opacity: 0.08;
+    }
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    /* Aquí es donde se activa la visibilidad del menú de escritorio */
+    header nav ul li a {
+        font-size: 1.125rem; /* text-lg en Tailwind */
+        padding: 0.5rem 0.75rem; /* Espaciado normal de links de navegación */
+    }
+    .logo-text {
+        font-size: 2.25rem; /* md:text-4xl en Tailwind (36px) */
+    }
+    .hero-section h2 {
+        font-size: 3.75rem; /* md:text-5xl en Tailwind (60px) */
+    }
+    .hero-section p {
+        font-size: 1.125rem; /* md:text-xl en Tailwind (20px) */
+    }
+    .btn-primary-cta, .btn-secondary-outline {
+        padding: 1rem 3rem; /* padding normal para md+ */
+        font-size: 1rem;
+    }
     .btn-primary-cta-lg {
         padding: 1.25rem 3.5rem; /* Vuelve al tamaño grande en desktop */
         font-size: 1.125rem; /* text-lg */
     }
-    .hero-section h2 {
-        font-size: 4rem; /* md:text-5xl */
-    }
-    .hero-section p {
-        font-size: 1.25rem; /* md:text-xl */
-    }
     .benefit-card {
-        padding: 2.5rem; /* Vuelve al tamaño grande en desktop */
+        padding: 2rem; /* Vuelve al tamaño grande en desktop */
     }
     .icon-circle {
         width: 60px; /* Vuelve al tamaño grande en desktop */
@@ -440,9 +477,22 @@ body {
         margin: 0 auto 1.5rem auto;
     }
     .float-logo {
-        width: initial; /* Resetea a tamaño original de la imagen o el que se haya definido sin media query */
+        width: 60px; /* Tamaño más grande para desktop */
         opacity: 0.1;
     }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .logo-text {
+        font-size: 2.5rem; /* lg:text-4xl en Tailwind (40px) */
+    }
+    .hero-section h2 {
+        font-size: 4.5rem; /* lg:text-6xl en Tailwind (72px) */
+    }
+    .float-logo {
+        width: 80px; /* Aún más grande */
+    }
+    /* Aquí se ajustan los tamaños individuales para los logos flotantes para que no se superpongan */
     .logo-netflix { width: 80px; }
     .logo-prime { width: 90px; }
     .logo-disney { width: 70px; }
