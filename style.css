@@ -336,13 +336,14 @@ body {
 
 
 /* Media queries para responsividad */
-@media (max-width: 767px) {
-    /* Ocultar la navegación de escritorio y mostrar el botón de menú hamburguesa */
+/* Tailwind ya maneja esto con prefijos sm:, md:, lg:, etc.
+    Estas reglas CSS personalizadas solo son un "fall-back" o para ajustes muy finos. */
+@media (max-width: 767px) { /* Ocultar la navegación de escritorio y mostrar el botón de menú hamburguesa */
     /* Estas clases ya están en el HTML con hidden md:block, etc. */
     header nav {
         /* Eliminamos flex-col, absolute, top-full, left-0, w-full, bg-gray-900, py-4, shadow-xl
-           porque el JS ahora maneja el toggle de la clase 'hidden' y 'flex flex-col items-center'
-           Las propiedades de posicionamiento y tamaño ya están en el HTML para móvil. */
+            porque el JS ahora maneja el toggle de la clase 'hidden' y 'flex flex-col items-center'
+            Las propiedades de posicionamiento y tamaño ya están en el HTML para móvil. */
     }
 
     header nav ul {
@@ -407,7 +408,7 @@ body {
 
 /* Media queries para responsividad */
 /* Tailwind ya maneja esto con prefijos sm:, md:, lg:, etc.
-   Estas reglas CSS personalizadas solo son un "fall-back" o para ajustes muy finos. */
+    Estas reglas CSS personalizadas solo son un "fall-back" o para ajustes muy finos. */
 @media (min-width: 640px) { /* sm breakpoint */
     .logo-text {
         font-size: 2rem; /* text-3xl en Tailwind (32px) */
