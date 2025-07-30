@@ -16,29 +16,17 @@ body {
     margin-right: auto;
 }
 
-/* Sección principal con imagen de fondo */
+/* Sección principal con color de fondo sólido */
 .hero-section {
-    background-image: url('https://i.imgur.com/K4z3o3k.png'); /* Usa una imagen similar a tu referencia */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #1a0033; /* Color de fondo sólido, igual que el body */
     position: relative;
     padding-top: 80px; /* Ajusta según sea necesario */
     padding-bottom: 80px; /* Ajusta según sea necesario */
-    z-index: 1; /* Asegura que el contenido esté por encima del overlay */
+    z-index: 1; /* Asegura que el contenido esté por encima de los logos flotantes */
     overflow: hidden; /* Para que los logos flotantes no se desborden al inicio */
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(26, 0, 51, 0.7); /* Overlay morado oscuro semi-transparente */
-    z-index: -1; /* Coloca el overlay detrás del contenido */
-}
+/* El pseudo-elemento ::before para el overlay de la imagen fue eliminado */
 
 
 /* Estilos para el texto del logo (header y footer) */
