@@ -1,0 +1,410 @@
+/*
+ * Aquí están los estilos personalizados para el efecto neón, los colores morados y el diseño de la imagen.
+ * El resto del diseño lo maneja Tailwind CSS en el archivo HTML.
+ */
+
+/* Fondo general y colores de texto */
+body {
+    background-color: #1a0033; /* Un morado muy oscuro, casi negro */
+    color: #f3e8ff; /* Blanco morado para el texto principal */
+}
+
+/* Contenedor principal de la página para centrado */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sección principal con imagen de fondo */
+.hero-section {
+    background-image: url('https://i.imgur.com/K4z3o3k.png'); /* Usa una imagen similar a tu referencia */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 80px; /* Ajusta según sea necesario */
+    padding-bottom: 80px; /* Ajusta según sea necesario */
+    z-index: 1; /* Asegura que el contenido esté por encima del overlay */
+    overflow: hidden; /* Para que los logos flotantes no se desborden al inicio */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 0, 51, 0.7); /* Overlay morado oscuro semi-transparente */
+    z-index: -1; /* Coloca el overlay detrás del contenido */
+}
+
+
+/* Estilos para el texto del logo (header y footer) */
+.logo-text {
+    font-family: 'Orbitron', sans-serif; /* Fuente más moderna, tecnológica */
+    color: #f3e8ff; /* Blanco morado */
+    text-shadow: 0 0 8px #a855f7, 0 0 15px #ec4899; /* Sombra neón sutil */
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-text:hover {
+    transform: scale(1.03);
+    text-shadow: 0 0 10px #a855f7, 0 0 20px #ec4899;
+}
+
+
+/* Estilos para los logos de las apps en las tarjetas */
+.app-logo {
+    /* filter: drop-shadow(0 0 3px rgba(168, 85, 247, 0.5)); */
+}
+
+/* Borde neón para las tarjetas de plataformas */
+.card-neon-border {
+    position: relative;
+    overflow: hidden;
+    background-color: #2a0050; /* Morado oscuro para las tarjetas */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid transparent; /* Borde inicial transparente */
+}
+.card-neon-border:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2px; /* Grosor del borde */
+    /* Gradiente morado brillante */
+    background: linear-gradient(45deg, #a855f7, #ec4899, #6366f1);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease-in-out;
+}
+.card-neon-border:hover:before {
+    opacity: 1; /* Visible al pasar el mouse */
+}
+
+/* Estilo de botón para las tarjetas de "Obtener cuenta" (dentro de las cards) */
+.btn-card-cta {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #8b5cf6; /* Morado medio */
+    color: white;
+    box-shadow: 0 0 8px #a78bfa; /* Sombra neón morada */
+    transition: all 0.3s ease-in-out;
+}
+.btn-card-cta:hover {
+    background-color: #a78bfa; /* Morado más claro al hover */
+    box-shadow: 0 0 12px #a78bfa, 0 0 20px #c4b5fd; /* Sombra más intensa */
+    transform: scale(1.02); /* Ligero crecimiento */
+}
+
+/* Botón principal (Ahora "Ver Precios") */
+.btn-primary-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border-radius: 9999px; /* rounded-full */
+    background-color: #5c0099; /* Morado principal */
+    color: white;
+    box-shadow: 0 0 10px #8b5cf6, 0 0 20px #a78bfa; /* Sombra neón morada */
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary-cta:hover {
+    background-color: #7b00cc; /* Morado más oscuro al hover */
+    box-shadow: 0 0 15px #a78bfa, 0 0 30px #c4b5fd;
+    transform: translateY(-2px);
+}
+
+
+/* Botón secundario (Ahora "Comprar Ahora") */
+.btn-secondary-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border-radius: 9999px;
+    background-color: transparent; /* Fondo transparente */
+    color: #a78bfa; /* Texto morado claro */
+    border: 2px solid #a78bfa; /* Borde morado claro */
+    box-shadow: 0 0 5px #a78bfa; /* Sombra neón suave */
+    transition: all 0.3s ease-in-out;
+}
+.btn-secondary-outline:hover {
+    background-color: #a78bfa; /* Fondo morado al hover */
+    color: white; /* Texto blanco al hover */
+    box-shadow: 0 0 10px #a78bfa, 0 0 20px #c4b5fd;
+    transform: translateY(-2px);
+}
+
+/* Botón de WhatsApp grande en el CTA final */
+.btn-primary-cta-lg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 1.25rem 3.5rem; /* Más grande */
+    border-radius: 9999px; /* rounded-full */
+    background-color: #22c55e; /* Verde WhatsApp */
+    color: white;
+    box-shadow: 0 0 10px #22c55e, 0 0 20px #16a34a; /* Sombra verde */
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary-cta-lg:hover {
+    background-color: #16a34a; /* Verde más oscuro al hover */
+    box-shadow: 0 0 15px #22c55e, 0 0 30px #16a34a;
+    transform: translateY(-2px);
+}
+
+
+/* Estilo de las tarjetas de beneficios (grid) */
+.benefit-card {
+    background-color: #2a0050; /* Morado oscuro para las tarjetas de beneficios */
+    padding: 2.5rem; /* p-10 */
+    border-radius: 1rem; /* rounded-xl */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* shadow-2xl */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #8b5cf6; /* Morado medio para el círculo */
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 auto 1.5rem auto; /* Centrar y espacio inferior */
+    box-shadow: 0 0 10px #a78bfa; /* Sombra neón en los íconos */
+    transition: all 0.3s ease-in-out;
+}
+
+.benefit-card:hover .icon-circle {
+    background-color: #a78bfa; /* Cambio de color al hover */
+    box-shadow: 0 0 15px #c4b5fd;
+}
+
+/* Estilo para la sección de CTA con fondo morado (la que contenía el WhatsApp) */
+.cta-purple-bg {
+    background-color: #5c0099; /* Morado principal */
+    background-image: linear-gradient(45deg, #5c0099, #8b5cf6); /* Un gradiente sutil */
+    color: white;
+    position: relative; /* Para posibles efectos internos */
+}
+.cta-purple-bg::before {
+    content: '';
+    position: absolute;
+    top: -5px; bottom: -5px; left: -5px; right: -5px;
+    background: linear-gradient(45deg, #a855f7, #ec4899, #6366f1);
+    z-index: -1;
+    border-radius: 1rem; /* Mismo radio que el contenedor */
+    filter: blur(8px); /* Efecto de brillo exterior */
+    opacity: 0.7;
+}
+
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.8s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* Efecto de logos flotantes en la hero section */
+.floating-logos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0; /* Asegurarse de que estén detrás del contenido principal */
+}
+
+.float-logo {
+    position: absolute;
+    opacity: 0.1; /* Ligera transparencia */
+    filter: grayscale(100%) brightness(0.5); /* Oscurecer y desaturar un poco */
+    animation: floatEffect 20s infinite ease-in-out;
+}
+
+/* Posiciones iniciales y tamaños para logos flotantes */
+.logo-netflix { top: 10%; left: 5%; width: 80px; animation-delay: 0s; }
+.logo-prime { top: 20%; right: 10%; width: 90px; animation-delay: 2s; }
+.logo-disney { bottom: 15%; left: 15%; width: 70px; animation-delay: 4s; }
+.logo-hbo { top: 5%; right: 25%; width: 100px; animation-delay: 6s; }
+.logo-crunchyroll { bottom: 5%; right: 5%; width: 60px; animation-delay: 8s; }
+.logo-win { top: 40%; left: 2%; width: 75px; animation-delay: 10s; }
+.logo-spotify { bottom: 25%; left: 30%; width: 85px; animation-delay: 12s; }
+.logo-youtube { top: 30%; right: 3%; width: 95px; animation-delay: 14s; }
+.logo-canva { bottom: 10%; right: 20%; width: 70px; animation-delay: 16s; }
+
+
+@keyframes floatEffect {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.05; }
+    50% { transform: translate(20px, -20px) scale(1.1); opacity: 0.15; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.05; }
+}
+
+
+/* Estilos para enlaces de navegación activos */
+.active-nav-link {
+    color: #a78bfa; /* Color morado brillante */
+    position: relative;
+    /* text-shadow: 0 0 5px #a78bfa, 0 0 10px #c4b5fd; */
+}
+
+.active-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Ajusta la posición de la línea */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #a78bfa; /* Color de la línea */
+    box-shadow: 0 0 8px #a78bfa; /* Sombra neón para la línea */
+    border-radius: 2px;
+    animation: underlineExpand 0.3s forwards;
+}
+
+@keyframes underlineExpand {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+/* Media queries para responsividad */
+@media (max-width: 767px) {
+    header nav {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #1a0033; /* Color de fondo del menú móvil */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        padding: 1rem 0;
+        z-index: 10;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 0.75rem 0;
+    }
+
+    .hero-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .hero-section h2 {
+        font-size: 3rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .btn-primary-cta, .btn-secondary-outline {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .benefit-card {
+        padding: 1.5rem;
+    }
+
+    .benefit-card h4 {
+        font-size: 1.5rem;
+    }
+
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}

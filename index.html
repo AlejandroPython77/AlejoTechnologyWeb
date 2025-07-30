@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejo Technology - Plataformas Digitales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+    <header class="bg-gray-900 shadow-lg py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/img/logoOff.png" alt="Alejo Technology Logo" class="h-16 md:h-20 mr-4">
+                <h1 class="text-3xl md:text-4xl font-extrabold logo-text">Alejo Technology</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6 text-lg font-medium">
+                    <li><a href="#" class="nav-link text-gray-300 hover:text-purple-400 transition-colors" data-target="inicio">Inicio</a></li>
+                    <li><a href="#" class="nav-link text-gray-300 hover:text-purple-400 transition-colors" data-target="precios">Plataformas</a></li>
+                    <li><a href="#" class="nav-link text-gray-300 hover:text-purple-400 transition-colors" data-target="beneficios">Beneficios</a></li>
+                    <li><a href="#" class="nav-link text-gray-300 hover:text-purple-400 transition-colors" data-target="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-gray-300 hover:text-purple-400 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="inicio" class="content-section py-20 px-6 hero-section active">
+            <div class="container mx-auto text-center relative z-10">
+                <p class="text-lg md:text-xl text-purple-300 mb-3 font-semibold animate-fade-in-down delay-100">
+                    <i class="fas fa-star mr-2 text-yellow-400"></i> Somos la Tienda de Streaming #1 en Colombia
+                </p>
+                <h2 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-purple-400 animate-fade-in-down">
+                    Tu Portal De Entretenimiento <br class="hidden md:inline"> Digital Premium
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto font-light animate-fade-in-up">
+                    Accede a las mejores plataformas de streaming y herramientas de diseño con descuentos increíbles
+                </p>
+                <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto animate-fade-in-up delay-300">
+                    ¡Comprar es fácil, seguro y rápido! Recibe tu cuenta al instante.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-scale-in">
+                    <a href="#" data-target="precios" class="nav-link btn-primary-cta">
+                        <i class="fas fa-eye mr-2"></i> Ver Precios
+                    </a>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20activar%20mi%20cuenta%20con%20Alejo%20Technology"
+                        target="_blank"
+                        class="btn-secondary-outline">
+                       <i class="fas fa-shopping-cart mr-2"></i> Comprar Ahora
+                    </a>
+                </div>
+            </div>
+            
+            <div class="floating-logos">
+                <img src="img/Netflix-new-icon.png" alt="Netflix" class="float-logo logo-netflix">
+                <img src="img/Amazon_Prime_Video_logo_(2024).svg.png" alt="Prime Video" class="float-logo logo-prime">
+                <img src="img/Disney+_logo.svg" alt="Disney+" class="float-logo logo-disney">
+                <img src="img/max.png" alt="HBO Max" class="float-logo logo-hbo">
+                <img src="img/cruncholl.png" alt="Crunchyroll" class="float-logo logo-crunchyroll">
+                <img src="img/win.png" alt="Win+" class="float-logo logo-win">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/512px-Spotify_logo_without_text.svg.png" alt="Spotify" class="float-logo logo-spotify">
+                <img src="img/youtube.png" alt="YouTube" class="float-logo logo-youtube">
+                <img src="img/5f9f3db439e8deab0568956861168a9c.jpg" alt="Canva Pro" class="float-logo logo-canva">
+            </div>
+        </section>
+
+        <section id="beneficios" class="content-section bg-gray-800 py-16 px-6">
+            <div class="container mx-auto">
+                <h3 class="text-4xl font-bold text-center mb-12 text-gray-100">¿Por qué elegir Alejo Technology?</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center"> <div class="benefit-card">
+                        <div class="icon-circle"><i class="fas fa-tags"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-gray-100">Precios Inmejorables</h4>
+                        <p class="text-gray-300 text-base">Obtén cuentas premium de streaming a precios hasta 70% más bajos que las tarifas oficiales sin comprometer la calidad.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon-circle"><i class="fas fa-bolt"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-gray-100">Activación Instantánea</h4>
+                        <p class="text-gray-300 text-base">Recibe los detalles de tu cuenta inmediatamente después de la confirmación del pago. Sin esperas, comienza a ver contenido ahora mismo.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon-circle"><i class="fas fa-headset"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-gray-100">Soporte Personalizado</h4>
+                        <p class="text-gray-300 text-base">Nuestro equipo de soporte dedicado está disponible 24/7 para ayudarte con cualquier pregunta o problema técnico.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon-circle"><i class="fas fa-shield-alt"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-gray-100">Garantía de Servicio</h4>
+                        <p class="text-gray-300 text-base">Garantizamos el funcionamiento de todas las cuentas. Si surge algún problema, proporcionamos reemplazo inmediato.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon-circle"><i class="fas fa-lock"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-gray-100">Pagos Seguros</h4>
+                        <p class="text-gray-300 text-base">Múltiples opciones de pago incluyendo Nequi, Daviplata y Bancolombia para tu comodidad y seguridad.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon-circle"><i class="fas fa-globe-americas"></i></div>
+                        <h4 class="text-2xl font-bold mb-2 text-gray-100">Acceso Global</h4>
+                        <p class="text-gray-300 text-base">Accede a contenido de todo el mundo con nuestras cuentas y perfiles de plataformas de streaming internacionales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="precios" class="content-section bg-gray-900 container mx-auto px-6 py-12">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-100">Planes y Precios</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12"> <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/Netflix-new-icon.png" 
+                             alt="Netflix Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">Netflix</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$12.000 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">Plan Ultra HD, perfiles personalizables.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20Netflix%20%2412.000%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/Amazon_Prime_Video_logo_(2024).svg.png" 
+                             alt="Amazon Prime Video Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">Amazon Prime Video</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$6.500 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">Incluye Prime Video y otros beneficios.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20Amazon%20Prime%20Video%20%246.500%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/max.png" 
+                             alt="HBO Max Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">HBO Max</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$6.000 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">Series y películas exclusivas.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20HBO%20Max%20%246.000%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/Disney+_logo.svg" 
+                             alt="Disney+ Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">Disney Estandar</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$8.000 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">Contenido de Disney, Pixar, Marvel y Star Wars.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20Disney%20Estandar%20%248.000%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/Disney+_logo.svg" 
+                             alt="Disney+ Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">Disney Premium</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$12.000 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">4K Ultra HD y contenido exclusivo.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20Disney%20Premium%20%2412.000%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/cruncholl.png"
+                             alt="Crunchyroll Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">Crunchyroll</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$5.500 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">El mejor anime al instante.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20Crunchyroll%20%245.500%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/win.png" 
+                             alt="Win Sports Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">Win +</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$10.000 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">Deportes en vivo y sin interrupciones.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20Win%20Mas%20%2410.000%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/512px-Spotify_logo_without_text.png" 
+                             alt="Spotify Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">Spotify</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$10.000 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">Música sin anuncios y descargas.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20Spotify%20%2410.000%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/youtube.png"
+                             alt="YouTube Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">YouTube</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$10.000 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">Videos sin anuncios y música.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20YouTube%20%2410.000%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/Paramount_Plus.svg" 
+                             alt="Paramount+ Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">Paramount+</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$5.000 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">Series y películas originales.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20Paramount%20%245.000%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/5f9f3db439e8deab0568956861168a9c.jpg" 
+                             alt="Canva Pro Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">Canva Pro (Mensual)</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$8.500 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">Diseña como un profesional cada mes.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20Canva%20Pro%20Mensual%20%248.500%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl shadow-2xl card-neon-border hover:scale-105 transition-transform duration-300">
+                    <div class="h-20 flex items-center justify-center mb-4">
+                        <img src="img/5f9f3db439e8deab0568956861168a9c.jpg" 
+                             alt="Canva Pro Logo" class="h-16 w-auto object-contain app-logo">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-center text-gray-100">Canva Pro (Anual)</h4>
+                    <p class="text-4xl font-extrabold text-purple-400 mb-4 text-center">$22.000 COP</p>
+                    <p class="text-gray-400 mb-6 text-center text-sm">Diseña y ahorra todo el año.</p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20una%20cuenta%20de%20Canva%20Pro%20Anual%20%2422.000%20COP"
+                        target="_blank"
+                        class="btn-card-cta">Obtener cuenta</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contacto" class="content-section text-center py-16 px-6">
+            <div class="container mx-auto">
+                <h3 class="text-4xl md:text-5xl font-extrabold mb-8 text-purple-400 animate-fade-in-down">¿Listo para comenzar?</h3>
+                <div class="cta-purple-bg rounded-lg max-w-4xl mx-auto shadow-2xl p-8 md:p-12">
+                    <p class="text-xl md:text-2xl text-purple-200 mb-8 max-w-2xl mx-auto animate-fade-in-up">
+                        Únete a miles de clientes satisfechos que ya están disfrutando de streaming premium a precios increíbles.
+                    </p>
+                    <a href="https://wa.me/573123659693?text=Hola,%20quiero%20activar%20mi%20cuenta%20con%20Alejo%20Technology"
+                        target="_blank"
+                        class="btn-primary-cta-lg animate-scale-in delay-200">
+                       <i class="fab fa-whatsapp mr-2"></i> Escríbenos por WhatsApp y comienza a disfrutar de tu plataforma favorita
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-950 text-center py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-8 text-left">
+                <div>
+                    <div class="flex items-center">
+                        <img src="/img/logoOff.png" alt="Alejo Technology Logo" class="h-8 mr-2 align-middle">
+                        <h4 class="text-2xl font-bold logo-text mb-4">Alejo Technology</h4>
+                    </div>
+                    <p class="text-gray-400 mb-4">Plataformas de Streaming, Calidad de servicio garantizada.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold text-purple-400 mb-4">Enlaces Rápidos</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="nav-link text-gray-400 hover:text-purple-400 transition-colors" data-target="inicio">Inicio</a></li>
+                        <li class="mb-2"><a href="#" class="nav-link text-gray-400 hover:text-purple-400 transition-colors" data-target="precios">Catálogo de Plataformas</a></li>
+                        <li class="mb-2"><a href="#" class="nav-link text-gray-400 hover:text-purple-400 transition-colors" data-target="beneficios">Beneficios</a></li>
+                        <li class="mb-2"><a href="#" class="nav-link text-gray-400 hover:text-purple-400 transition-colors" data-target="contacto">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold text-purple-400 mb-4">Información de Contacto</h4>
+                    <ul>
+                        <li class="mb-2 text-gray-400"><i class="fab fa-whatsapp mr-2"></i> Soporte WhatsApp: 3123659693</li>
+                        <li class="mb-2 text-gray-400"><i class="fas fa-envelope mr-2"></i> alejotechnology77@gmail.com</li>
+                        <li class="mb-2 text-gray-400"><i class="fas fa-shield-alt mr-2"></i> Garantía de Servicio</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-gray-500 mt-8">&copy; 2025 Alejo Technology. Todos los derechos reservados. Cuentas premium de plataformas de streaming con servicio garantizado.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            function showSection(targetId) {
+                contentSections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.style.display = 'block';
+                        section.classList.add('active');
+                    } else {
+                        section.style.display = 'none';
+                        section.classList.remove('active');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    if (link.dataset.target === targetId) {
+                        link.classList.add('active-nav-link'); // Añade clase para el indicador visual
+                    } else {
+                        link.classList.remove('active-nav-link');
+                    }
+                });
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.dataset.target;
+                    showSection(targetId);
+                    history.pushState(null, '', `#${targetId}`); // Actualiza la URL sin recargar
+                });
+            });
+
+            // Revisa si hay un hash en la URL al cargar la página para mostrar la sección correcta
+            const initialHash = window.location.hash.substring(1); // Elimina el '#'
+            if (initialHash && document.getElementById(initialHash)) {
+                showSection(initialHash);
+            } else {
+                showSection('inicio'); // Muestra inicio por defecto
+            }
+
+            // Manejo del menú móvil
+            const mobileMenuButton = document.querySelector('header button.md\\:hidden');
+            const mobileNav = document.querySelector('header nav.hidden.md\\:block');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+                mobileNav.classList.toggle('flex');
+                mobileNav.classList.toggle('flex-col');
+                mobileNav.classList.toggle('absolute');
+                mobileNav.classList.toggle('top-full');
+                mobileNav.classList.toggle('left-0');
+                mobileNav.classList.toggle('w-full');
+                mobileNav.classList.toggle('bg-gray-900');
+                mobileNav.classList.toggle('py-4');
+                mobileNav.classList.toggle('shadow-xl');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 768 && mobileNav.classList.contains('flex')) {
+                        mobileNav.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-gray-900', 'py-4', 'shadow-xl');
+                        mobileNav.classList.add('hidden');
+                    }
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
